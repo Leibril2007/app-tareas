@@ -10,7 +10,7 @@ function header(){
     header.appendChild(logo);
 
     let textH1 = document.createElement('h1');
-    textH1.textContent = "Todo-List";
+    textH1.textContent = "To-do-List";
     header.appendChild(textH1);
 
     return header;
