@@ -1,10 +1,9 @@
 .d-formulario{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
+    justify-content: space-between;
     height: 6.2rem;
+    padding: 1rem 2rem;
 }
 
 .input-formulario{
