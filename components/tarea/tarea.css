@@ -25,4 +25,10 @@
     margin-bottom: 1.5rem;
     padding: 1rem;
     border-radius: 3.5px;
+    cursor: pointer;
+}
+
+.cambiar-color{
+    background-color: rgb(253, 221, 142);
+    text-decoration: line-through;
 }

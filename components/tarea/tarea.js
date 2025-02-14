@@ -1,5 +1,5 @@
 import { lista } from "../formulario/data.js";
-
+import { marcarTexto } from "./completarTarea.js";
 
 function tareas()   {
 
@@ -15,10 +15,12 @@ function tareas()   {
 
         let divBase = document.createElement('div');
         divBase.className = "div-base";
+        divBase.addEventListener('click', marcarTexto);
 
         let input = document.createElement('input');
-        input.className = "input-form";
-        input.type = 'checkbox'; 
+        input.className= "input-form";
+        input.type = 'checkbox';
+
         divBase.appendChild(input);
 
         divBase.appendChild(cadaLista(element));
