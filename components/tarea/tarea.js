@@ -1,7 +1,7 @@
+import { tareas } from "./itemTarea.js";
 import { lista } from "../formulario/data.js";
-import { marcarTexto } from "./completarTarea.js";
 
-function tareas()   {
+function cargarTareas(){
 
     let tareasD = document.createElement('div');
     tareasD.className = "tareas";
@@ -11,36 +11,9 @@ function tareas()   {
     titulo.textContent = "Personal"
     tareasD.appendChild(titulo);
 
-    lista.forEach(element => {
+    tareasD.appendChild(tareas(lista));
 
-        let divBase = document.createElement('div');
-        divBase.className = "div-base";
-        divBase.addEventListener('click', marcarTexto);
-
-        let input = document.createElement('input');
-        input.className= "input-form";
-        input.type = 'checkbox';
-
-        divBase.appendChild(input);
-
-        divBase.appendChild(cadaLista(element));
-        
-        
-        tareasD.appendChild(divBase);
-    });
-
-    return tareasD;
+    return tareasD;     
 }
 
-
-function cadaLista(nombreTarea){
-
-    let tarea = document.createElement('div');
-    tarea.className = "nombre-tarea";
-    tarea.textContent = nombreTarea;
-
-    return tarea;
-}
-
-
-export {tareas}
+export { cargarTareas }

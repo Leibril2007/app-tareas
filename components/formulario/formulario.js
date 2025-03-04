@@ -1,7 +1,8 @@
+import { agregarTarea } from "./funcionesFormulario.js";
+
 function formulario(){
     let form = document.createElement('div');
     form.className = "d-formulario";
-
 
     let formulario = document.createElement('input');
     formulario.className = "input-formulario";
@@ -11,6 +12,10 @@ function formulario(){
     let boton = document.createElement('div');
     boton.className = "boton-form";
     boton.textContent = "Add";
+
+    boton.addEventListener("click", ()=>{
+        agregarTarea();
+    })
 
     form.appendChild(formulario);
     form.appendChild(boton);
