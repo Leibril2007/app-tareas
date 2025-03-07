@@ -1,7 +1,19 @@
 import { tareas } from "./itemTarea.js";
-import { lista } from "../formulario/data.js";
+//import { lista } from "../formulario/data.js";
 
-function cargarTareas(){
+//import { consultarTareas } from "../formulario/data.js";
+
+function consultarTareas(){
+
+    fetch('http://localhost:3000/usuarios')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+}
+
+
+function cargarTareas(data){
 
     let tareasD = document.createElement('div');
     tareasD.className = "tareas";
@@ -11,9 +23,14 @@ function cargarTareas(){
     titulo.textContent = "Personal"
     tareasD.appendChild(titulo);
 
-    tareasD.appendChild(tareas(lista));
+    data.forEach((eLista) =>{
 
-    return tareasD;     
-}
+        tareasD.appendChild(tareas(eLista));
 
-export { cargarTareas }
+    } );
+
+    return tareasD;
+
+}  
+
+export { cargarTareas, consultarTareas }
