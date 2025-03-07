@@ -1,5 +1,5 @@
 //import { consultarTareas } from "./data.js";
-import { cargarTareas } from "../tarea/tarea.js";
+import { consultarTareasBackend } from "../tarea/tarea.js";
 
 
 function agregarTarea(){
@@ -9,7 +9,7 @@ function agregarTarea(){
     
     let contenedorTareas = document.querySelector("#contenedor-tareas");
     contenedorTareas.innerHTML = '';
-    contenedorTareas.appendChild(cargarTareas());
+    contenedorTareas.appendChild(consultarTareasBackend());
 
 
 }

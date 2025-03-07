@@ -1,19 +1,21 @@
 import { tareas } from "./itemTarea.js";
-//import { lista } from "../formulario/data.js";
 
-//import { consultarTareas } from "../formulario/data.js";
-
-function consultarTareas(){
+function consultarTareasBackend(){
 
     fetch('http://localhost:3000/usuarios')
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => cargarTareasDOM(data))
     .catch(error => console.error('Error:', error));
 
 }
 
+function cargarTareasDOM(data){
+    let DOM = document.querySelector('#root');
+    DOM.appendChild(renderTareas(data));
+}
 
-function cargarTareas(data){
+
+function renderTareas(data){
 
     let tareasD = document.createElement('div');
     tareasD.className = "tareas";
@@ -23,9 +25,11 @@ function cargarTareas(data){
     titulo.textContent = "Personal"
     tareasD.appendChild(titulo);
 
-    data.forEach((eLista) =>{
+    data.forEach((eLiObjetos) =>{
+        
+        console.log(eLiObjetos.nombre_tarea);
 
-        tareasD.appendChild(tareas(eLista));
+        tareasD.appendChild(tareas(eLiObjetos.nombre_tarea));
 
     } );
 
@@ -33,4 +37,4 @@ function cargarTareas(data){
 
 }  
 
-export { cargarTareas, consultarTareas }
+export { consultarTareasBackend }
