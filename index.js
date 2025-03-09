@@ -1,30 +1,30 @@
-//import { header } from "./components/header/header.js";
+import { header } from "./components/header/header.js";
 import { consultarTareasBackend } from "./components/tarea/tarea.js";
-//import { formulario } from "./components/formulario/formulario.js";
+import { formulario } from "./components/formulario/formulario.js";
 
 
 let DOM = document.getElementById("root");
 
 function cargarDOM(){
 
-    /* DOM.appendChild(header()); */
+    DOM.appendChild(header());
 
     consultarTareasBackend();
 
 /*     let contenedorTareas = document.createElement('div');
     contenedorTareas.id = 'contenedor-tareas';
-    contenedorTareas.appendChild(cargarTareas());
+    contenedorTareas.appendChild(consultarTareasBackend());
     
     
-
-
     DOM.appendChild(contenedorTareas); */
-//  DOM.appendChild(formulario());
+    DOM.appendChild(formulario());
        
 }
 
 
 cargarDOM();
+
+export {cargarDOM};
 
 
 

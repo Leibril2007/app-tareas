@@ -1,3 +1,4 @@
+import { cargarDOM } from "../../index.js";
 import { agregarTarea } from "./funcionesFormulario.js";
 
 function formulario(){
@@ -15,6 +16,7 @@ function formulario(){
 
     boton.addEventListener("click", ()=>{
         agregarTarea();
+        cargarDOM();
     })
 
     form.appendChild(formulario);
