@@ -17,6 +17,7 @@ function formulario(){
     boton.addEventListener("click", ()=>{
         agregarTarea();
         cargarDOM();
+        location.reload();
     })
 
     form.appendChild(formulario);

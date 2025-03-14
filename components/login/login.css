@@ -1,0 +1,98 @@
+.sec-login{
+    border: 1px solid black;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+    background-color: rgb(255, 189, 65);
+}
+
+.div-login{
+    background-color: white;
+
+    max-width: 45rem;
+    margin: auto;
+    height: 55rem;
+    border-radius: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15rem 4rem 20rem 2.5rem auto auto;
+}
+
+.activar-flex{
+    display: none;
+}
+
+.log-login{
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    max-width: 20rem;
+    max-height: 15rem;
+}
+.tit-login{
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+    font-size: 2.2rem;
+}
+
+.form-login{
+    grid-row: 3/4;
+
+    max-height: 20rem;
+
+    display: grid;
+    grid-template-rows: auto 4rem auto 1fr;
+    gap: 0.4rem;
+}
+.titLogForm{
+    align-items: center;
+    justify-self: center;
+    margin-top: 2.3rem;
+}
+.inputL {
+    justify-self: center;
+    width: 22rem;
+    height: 2.8rem;
+    border: none;
+    border-bottom: 2px solid rgb(188, 188, 188);
+    outline: none;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: rgb(51, 51, 51);
+}
+
+
+
+.btns{  
+    width: 15rem;
+    height: 5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+
+    cursor: pointer;
+}
+.btn-entrar{
+    grid-row: 5/6;
+    background-color: rgb(62, 200, 255);
+}
+
+.btn-sesion{
+    grid-row: 6/7;
+ 
+    border: 1.5px solid rgb(97, 187, 223);
+}
+
+
+.error{
+    justify-self: center;
+    grid-row: 4/5;
+    color: red;
+    font-size: 1.2rem;
+}

@@ -27,9 +27,9 @@ function renderTareas(data){
 
     data.forEach((eLiObjetos) =>{
         
-        console.log(eLiObjetos.nombre_tarea);
+        console.log(eLiObjetos.nombre);
 
-        tareasD.appendChild(tareas(eLiObjetos.nombre_tarea));
+        tareasD.appendChild(tareas(eLiObjetos.nombre));
 
     } );
 
